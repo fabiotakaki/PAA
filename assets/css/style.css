@@ -1,0 +1,13 @@
+header{
+	padding:20px;
+	background: url('../img/background.jpg') no-repeat;
+	background-size: cover;
+	height:500px;
+}
+.info{
+	color:#fff;
+	text-shadow:2px 2px #333;
+}
+footer{
+	padding:15px;
+}
