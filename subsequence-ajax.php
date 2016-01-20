@@ -40,6 +40,40 @@
 		array_push($result, $c);
 		array_push($result, $b);
 
+		# Exibe tabela de setas
+		/*echo "<table class='table table-hover'>";
+		echo "<thead>";
+		echo "<tr>";
+		echo "<th>&nbsp;</th>";
+		echo "<th>y[j]</th>";
+		for($i=0; $i<=count($y); $i++){
+			echo "<th>";
+			echo $y[$i];
+			echo "</th>";
+		}
+		echo "</tr>";
+		echo "</thead>";
+		echo "<tbody>";
+		for($f=0; $f<=count($x); $f++){
+
+			echo "<tr>";
+			if($f == 0) echo "<th>x[i]</th>";
+			else{
+				echo "<th>";
+				echo $x[$f - 1];
+				echo "</th>";
+			}
+			for($j=0; $j<count($b[$i]); $j++)
+			{
+				echo "<th>";
+				echo $c[$f][$j]." ".$b[$f][$j];
+				echo "</th>";
+			}
+			echo "</tr>";
+		}
+		echo "</tbody>";
+		echo "</table><hr>";*/
+
 		return $result;
 	}
 
@@ -55,9 +89,6 @@
 	}
 
 	$result = subsequence($x, $y);
-	/*echo "<pre>";
-	print_r($result);
-	echo "</pre>";*/
 
 	echo "A maior sequência comum encontrada é: <b>";
 	printLCS($result[1], $x, count($x), count($y)); echo "</b>";

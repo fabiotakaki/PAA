@@ -114,6 +114,11 @@
 		numJobs 	= $('#numJobs').val();
 		numPerson 	= $('#numPerson').val();
 
+		if(numPerson != numJobs){
+			alert('Os valores devem ser iguais');
+			return;
+		}
+
 		if(block == 0){
 			if(numJobs != '' || numPerson != ''){
 				for(var i=0; i<numPerson; i++){
@@ -144,10 +149,9 @@
 					{
 						works.push([]);
 
-      					works[i].push([]);
 						for(var j=0; j<numJobs; j++)
 						{
-							works[i][j] = $('#job'+i+j).val();
+							works[i].push($('#job'+i+j).val());
 						}
 					}
 					console.log(works);

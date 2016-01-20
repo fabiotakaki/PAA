@@ -41,10 +41,12 @@
 	            }
 	        }
 	    }
-	    return $m;
+	    return $m[1][$n-1];
 	}
 
+
 	$p = $_POST['p'];
-	$test = MatrixChainOrder($p);
-	print_r($test);
+	$items = $_POST['items'];
+	$m = MatrixChainOrder($p);
+	echo "O mínimo de multiplicações necessárias para chegar a solução é: <b>".$m."</b>";
 ?>
